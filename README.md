@@ -8,7 +8,7 @@ Additionally, it provides fixes for common Zotero Flatpak stability issues, spec
 
 *   **LibreOffice Integration:** Locates the `Zotero_LibreOffice_Integration.oxt` file hidden inside the Flatpak container (handling version-specific hash paths) and installs it into the host LibreOffice instance.
 *   **Dependency Management:** Automatically checks for and installs required Java dependencies (`libreoffice-java-common`, `default-jre`) necessary for the plugin to function.
-*   **Crash Prevention:** Applies Flatpak overrides to bypass Wayland socket issues that cause Zotero to crash when opening the citation picker.
+* ~~**Crash Prevention:** Applies Flatpak overrides to bypass Wayland socket issues that cause Zotero to crash when opening the citation picker.~~ [Solved in  https://github.com/flathub/org.zotero.Zotero/issues/165]
 *   **UI Scaling Fix:** Forces the interface scaling factor to 1.0 to prevent the application from appearing too large on GNOME/Wayland setups.
 
 ## Prerequisites

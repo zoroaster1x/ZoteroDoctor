@@ -270,24 +270,21 @@ def interactive_menu(doctor):
     while True:
         print(f"\n{Colors.BOLD}--- ZoteroDoctor Menu ---{Colors.ENDC}")
         print("1. Install LibreOffice Plugin")
-        print("2. Fix Wayland Crashes")
-        print("3. Fix UI Scaling")
-        print("4. Apply All Fixes")
-        print("5. Exit")
+        # Legacy feature `fix_wayland_crashes` hidden from menu as it's resolved in Zotero v8
+        print("2. Fix UI Scaling")
+        print("3. Apply All Fixes")
+        print("4. Exit")
         
         try:
-            choice = input(f"{Colors.BLUE}Select option [1-5]: {Colors.ENDC}")
+            choice = input(f"{Colors.BLUE}Select option [1-4]: {Colors.ENDC}")
             if choice == '1':
                 doctor.install_plugin()
             elif choice == '2':
-                doctor.fix_wayland_crashes()
+                doctor.fix_ui_scaling()
             elif choice == '3':
                 doctor.fix_ui_scaling()
-            elif choice == '4':
-                doctor.fix_wayland_crashes()
-                doctor.fix_ui_scaling()
                 doctor.install_plugin()
-            elif choice == '5':
+            elif choice == '4':
                 sys.exit(0)
             else:
                 print("Invalid selection.")
